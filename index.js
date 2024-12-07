@@ -89,7 +89,7 @@ async function run() {
 
     app.post('/users', async (req, res) => {
       const newUsers = req.body;
-      console.log('crating new users', newUsers);
+      // console.log('crating new users', newUsers);
       const result = await userCollection.insertOne(newUsers);
       res.send(result);
     });
@@ -129,5 +129,5 @@ app.get('/', (req, res) => {
 })
 
 app.listen(port, () => {
-  console.log(`Coffee Server is running on port: ${port}`)
+  // console.log(`Coffee Server is running on port: ${port}`)
 })
